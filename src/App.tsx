@@ -18,6 +18,7 @@ function App() {
     }, []);
 
     const getAllBlogs = () => {
+        // get All blogs here
         setBlogs([]);
     };
 
