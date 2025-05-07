@@ -1,39 +1,89 @@
 #root {
   width: 100vw;
   height: 100vh;
-  padding: 10px;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-}
+:root {
+  /* Primary Colors */
+  --primary-color: hsl(240, 100%, 50%);
+  --primary-color-light: hsl(240, 100%, 70%);
+  --primary-color-dark: hsl(240, 100%, 30%);
 
-.blog {
-  border-bottom: 1px solid white;
-  padding: 20px;
-  cursor: pointer;
-}
+  --secondary-color: hsl(340, 82%, 52%);
+  --secondary-color-light: hsl(340, 82%, 70%);
+  --secondary-color-dark: hsl(340, 82%, 35%);
 
-input {
-  margin: 10px;
-  padding: 20px;
-  width: 250px;
-  font-size: 18px;
-  border: none;
-  border-radius: 10px;
-}
+  /* Background & Text */
+  --bg-color: hsl(0, 0%, 100%);
+  --bg-muted: hsl(0, 0%, 96%);
+  --bg-dark: hsl(220, 15%, 15%);
 
-button {
-  margin: 10px
-}
+  --text-primary: hsl(0, 0%, 10%);
+  --text-secondary: hsl(0, 0%, 40%);
+  --text-inverted: hsl(0, 0%, 100%);
 
-.submit-btn {
-  background-color: blue;
-}
+  /* Status Colors */
+  --success: hsl(145, 63%, 42%);
+  --warning: hsl(43, 100%, 50%);
+  --error: hsl(0, 80%, 50%);
+  --info: hsl(210, 100%, 50%);
 
-.remove-btn {
-  background-color: rgba(255, 0, 0, 0.72);
+  /* Grayscale */
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --gray-light: hsl(0, 0%, 85%);
+  --gray: hsl(0, 0%, 60%);
+  --gray-dark: hsl(0, 0%, 40%);
+
+  /* Shadow Colors*/
+  --soft-black: hsla(0, 0%, 0%, 0.1);
+  --soft-blue:hsla(240, 100%, 50%, 0.2);
+
+  /* Font */
+  --font-family: 'Inter';
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-0: 0px;
+  --spacing-1: 1px;
+  --spacing-2: 4px;
+  --spacing-3: 8px;
+  --spacing-4: 12px;
+  --spacing-5: 16px;
+  --spacing-6: 24px;
+  --spacing-7: 32px;
+  --spacing-8: 64px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+
+  /* Breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* Box Shadows */
+  --shadow-1: var(--spacing-0) var(--spacing-2) var(--spacing-3) var(--soft-black);
+  --shadow-2:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-2) hsla(240, 100%, 50%, 0.2);
+
+  /* Border */
+  --border-sm: 1px solid var(--black);
+  --border-md: 4px solid var(--black);
+  --border-lg: 12px solid var(--black);
 }
