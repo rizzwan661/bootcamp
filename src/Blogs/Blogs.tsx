@@ -80,7 +80,7 @@ export function Blogs() {
                         />
 
                         {authors.map((author, index) => (
-                            <div key={index} className="author-input">
+                            <div key={`${author.name} ${index}`} className="author-input">
                                 <input
                                     className={styles.input}
                                     type="text"
@@ -127,8 +127,8 @@ export function Blogs() {
                             <p>{blog.content}</p>
                             <strong>Authors:</strong>
                             <ul>
-                                {blog.authorDetails.map((author, i) => (
-                                    <li key={i}>
+                                {blog.authorDetails.map((author, index) => (
+                                    <li key={`${author.name} ${index}`}>
                                         {author.name} ({author.email})
                                     </li>
                                 ))}
