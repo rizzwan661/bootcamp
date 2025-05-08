@@ -1,7 +1,7 @@
 import type { Author } from '../../types/Author';
 import styles from './blog-form.module.css'
 import type { Post } from '../../types/Post';
-import { Status } from '../../types/Status';
+import { Status } from '../../types/BlogStatus';
 
 interface BlogFormProps  {
     blogs: Post[];
