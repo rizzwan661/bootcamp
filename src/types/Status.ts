@@ -3,4 +3,4 @@ export const Status = {
     Published: "Published"
 } as const
 
-export type PostStatus = (typeof Status)[keyof typeof Status]
+export type BlogStatus = (typeof Status)[keyof typeof Status]

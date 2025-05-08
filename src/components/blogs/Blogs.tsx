@@ -1,7 +1,7 @@
 import { useState } from "react";
-import type { Post } from "../types/Post.ts";
-import type { Author } from "../types/Author.ts";
-import { Status } from "../types/Status.ts";
+import type { Post } from "../../types/Post.ts";
+import type { Author } from "../../types/Author.ts";
+import { Status } from "../../types/Status.ts";
 import styles from './Blogs.module.css';
 
 export function Blogs() {
