@@ -39,8 +39,16 @@ export function Blogs() {
                 <h2>Blog Manager</h2>
                 <div className={styles.searchAndBtnContainer}>
                     <input className={styles.searchInput} value={searchQuery} onChange={searchBlog} placeholder={"Search blogs..."}/>
-                    <button className={styles.btn} onClick={toggleView}>View</button>
-                    <button className={styles.btn} onClick={() => setCreateBlog(true)}>Create Blog</button>
+                    <button className={styles.btn} onClick={toggleView}>
+                        <svg className={styles.icon}>
+                            <use href={`src/assets/svg/sprites/all-icons-sprites.svg#${isGridView ? "list-view-icon" : "grid-view-icon"}`} />
+                        </svg>
+                    </button>
+                    <button className={styles.btn} onClick={() => setCreateBlog(true)}>
+                        <svg className={styles.icon}>
+                            <use href={`src/assets/svg/sprites/all-icons-sprites.svg#add-icon`} />
+                        </svg>
+                    </button>
                 </div>
             </nav>
             <div className={styles.content}>
