@@ -3,7 +3,7 @@ import styles from './blog-form.module.css'
 import type { Post } from '../../types/Post';
 import { Status } from '../../types/BlogStatus';
 
-interface BlogFormProps  {
+type BlogFormProps =  {
     blogs: Post[];
     title: string;
     content: string;

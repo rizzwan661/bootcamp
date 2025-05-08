@@ -17,7 +17,3 @@
 .content {
     padding: var(--spacing-4);
 }
-
-.blog {
-    cursor: pointer;
-}

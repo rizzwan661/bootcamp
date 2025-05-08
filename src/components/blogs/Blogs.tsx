@@ -1,8 +1,9 @@
 import { useState} from "react";
 import type {Post} from "../../types/Post.ts";
 import type {Author} from "../../types/Author.ts";
-import styles from './Blogs.module.css';
 import {BlogForm} from "../blog-form/blog-form.tsx";
+import { BlogCard } from "../blog-card/blog-card.tsx";
+import styles from './Blogs.module.css';
 
 export function Blogs() {
     const [blogs, setBlogs] = useState<Post[]>([]);
@@ -36,18 +37,7 @@ export function Blogs() {
                 <h2>All Blogs</h2>
                 {blogs.length > 0 ? (
                     blogs.map(blog => (
-                        <div className={styles.blog} key={blog.id}>
-                            <h2>{blog.title}</h2>
-                            <p>{blog.content}</p>
-                            <strong>Authors:</strong>
-                            <ul>
-                                {blog.authorDetails.map((author, index) => (
-                                    <li key={`${author.name} ${index}`}>
-                                        {author.name} ({author.email})
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        <BlogCard blog={blog}/>
                     ))
                 ) : (
                     <p>No blogs to show.</p>
