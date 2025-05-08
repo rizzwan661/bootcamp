@@ -1,5 +1,5 @@
 import './App.css';
-import {Blogs} from "./Blogs/Blogs.tsx";
+import { Blogs } from './components/blogs/Blogs';
 
 function App() {
     return <>
