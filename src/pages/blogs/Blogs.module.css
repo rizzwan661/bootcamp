@@ -3,6 +3,7 @@
     width: 100%;
     background-color: var(--bg-color);
     color: var(--black);
+    overflow-y: scroll;
 }
 
 .header {
@@ -16,4 +17,30 @@
 
 .content {
     padding: var(--spacing-4);
+}
+
+.blogsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    row-gap: var(--spacing-7);
+    column-gap: var(--spacing-9);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-4) var(--spacing-0);
+}
+
+.emptyStateContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: var(--spacing-4) var(--spacing-0);
+}
+
+.emptyContainer {
+    font-size: var(--font-size-xl);
+    color: gray;
+    padding: var(--spacing-7);
+    text-align: center;
 }

@@ -8,6 +8,37 @@ export function Blogs() {
     const [blogs, setBlogs] = useState<Post[]>([]);
     const [isCreateBlogEnabled, setCreateBlog] = useState(false);
 
+    const dummyBlog: Post[] = [
+        {
+            id: "100",
+            title: "React Ceatsheet",
+            content: "Somethiiing related to React",
+            status: "Published",
+            authorDetails: [{name: "Rizwan Kazi", email: "rizwan@gmail.com"}]
+        },
+        {
+            id: "101",
+            title: "React Ceatsheet",
+            content: "Somethiiing related to React",
+            status: "Published",
+            authorDetails: [{name: "Rizwan Kazi", email: "rizwan@gmail.com"}]
+        },
+        {
+            id: "102",
+            title: "React Ceatsheet",
+            content: "Somethiiing related to React",
+            status: "Published",
+            authorDetails: [{name: "Rizwan Kazi", email: "rizwan@gmail.com"}]
+        },
+        {
+            id: "104",
+            title: "React Ceatsheet",
+            content: "Somethiiing related to React",
+            status: "Published",
+            authorDetails: [{name: "Rizwan Kazi", email: "rizwan@gmail.com"}]
+        },
+    ];
+
     return (
         <div className={styles.mainContainer}>
             <nav className={styles.header}>
@@ -25,13 +56,15 @@ export function Blogs() {
                 )}
 
                 <h2>All Blogs</h2>
-                {blogs.length > 0 ? (
-                    blogs.map(blog => (
-                        <BlogCard blog={blog}/>
-                    ))
-                ) : (
-                    <p>No blogs to show.</p>
-                )}
+                <div className={blogs.length ? styles.blogsContainer : styles.emptyStateContainer}>
+                    {blogs.length ? (
+                        blogs.map(blog => (
+                            <BlogCard blog={blog} key={blog.id} />
+                        ))
+                    ) : (
+                        <p className={styles.emptyContainer}>No blogs to show.</p>
+                    )}
+                </div>
             </div>
         </div>
     );

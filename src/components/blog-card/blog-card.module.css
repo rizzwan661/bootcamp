@@ -1,3 +1,7 @@
 .blog {
     cursor: pointer;
+    width: 400px;
+    border: 1px solid var(--gray);
+    padding: var(--spacing-4);
+    border-radius: var(--spacing-3);
 }

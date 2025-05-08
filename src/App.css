@@ -1,6 +1,7 @@
 #root {
   width: 100vw;
   height: 100vh;
+  box-sizing: border-box;
 }
 
 :root {
@@ -64,6 +65,7 @@
   --spacing-6: 24px;
   --spacing-7: 32px;
   --spacing-8: 64px;
+  --spacing-9: 80px;
 
   /* Radius */
   --radius-sm: 4px;
