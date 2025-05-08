@@ -2,21 +2,19 @@ import type { Author } from '../../types/Author';
 import styles from './blog-form.module.css'
 import type { Post } from '../../types/Post';
 import { Status } from '../../types/BlogStatus';
+import { useState } from 'react';
 
 type BlogFormProps =  {
     blogs: Post[];
-    title: string;
-    content: string;
-    authors: Author[];
     setBlogs: React.Dispatch<React.SetStateAction<Post[]>>;
-    setTitle: React.Dispatch<React.SetStateAction<string>>;
-    setContent: React.Dispatch<React.SetStateAction<string>>;
-    setAuthors: React.Dispatch<React.SetStateAction<Author[]>>;
     setCreateBlog: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export function BlogForm(props: BlogFormProps) {
-    const {blogs, setBlogs,title, content, setTitle, setContent, authors,setAuthors, setCreateBlog} = props;
+    const {blogs, setBlogs, setCreateBlog} = props;
+    const [title, setTitle] = useState('');
+    const [content, setContent] = useState('');
+    const [authors, setAuthors] = useState<Author[]>([{name: '', email: ''}]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();

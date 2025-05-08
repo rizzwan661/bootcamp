@@ -1,15 +1,11 @@
 import { useState} from "react";
 import type {Post} from "../../types/Post.ts";
-import type {Author} from "../../types/Author.ts";
 import {BlogForm} from "../blog-form/blog-form.tsx";
 import { BlogCard } from "../blog-card/blog-card.tsx";
 import styles from './Blogs.module.css';
 
 export function Blogs() {
     const [blogs, setBlogs] = useState<Post[]>([]);
-    const [title, setTitle] = useState('');
-    const [content, setContent] = useState('');
-    const [authors, setAuthors] = useState<Author[]>([{name: '', email: ''}]);
     const [isCreateBlogEnabled, setCreateBlog] = useState(false);
 
     return (
@@ -22,14 +18,8 @@ export function Blogs() {
             <div className={styles.content}>
                 {isCreateBlogEnabled && (
                     <BlogForm
-                        title={title}
                         blogs={blogs}
-                        content={content}
-                        authors={authors}
                         setBlogs={setBlogs}
-                        setTitle={setTitle}
-                        setContent={setContent}
-                        setAuthors={setAuthors}
                         setCreateBlog={setCreateBlog}
                     />
                 )}
