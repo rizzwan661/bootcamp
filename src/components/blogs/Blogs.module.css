@@ -21,35 +21,3 @@
 .blog {
     cursor: pointer;
 }
-
-.input {
-    width: 250px;
-    padding: var(--spacing-5);
-    margin: var(--spacing-3);
-    font-size: var(--font-size-md);
-    font-family: var(--font-family), serif;
-    color: var(--text-primary);
-    background-color: var(--bg-muted);
-    border: var(--border-sm);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-1);
-    outline: none;
-    transition: all 0.2s ease-in-out;
-}
-
-.input:focus {
-    border-color: var(--primary-color);
-    box-shadow: var(--shadow-2);
-}
-
-button {
-    margin: 10px
-}
-
-.submitBtn {
-    background-color: blue;
-}
-
-.removeBtn {
-    background-color: rgba(255, 0, 0, 0.72);
-}
