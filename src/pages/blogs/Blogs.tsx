@@ -1,7 +1,7 @@
 import { useState} from "react";
 import type {Post} from "../../types/Post.ts";
-import {BlogForm} from "../blog-form/blog-form.tsx";
-import { BlogCard } from "../blog-card/blog-card.tsx";
+import {BlogForm} from "../../components/blog-form/blog-form.tsx";
+import { BlogCard } from "../../components/blog-card/blog-card.tsx";
 import styles from './Blogs.module.css';
 
 export function Blogs() {
