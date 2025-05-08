@@ -1,7 +1,6 @@
 #root {
   width: 100vw;
   height: 100vh;
-  box-sizing: border-box;
 }
 
 :root {
@@ -41,7 +40,7 @@
   --soft-blue:hsla(240, 100%, 50%, 0.2);
 
   /* Font */
-  --font-family: 'Inter';
+  --font-family: "Georgia";
 
   --font-size-xs: 12px;
   --font-size-sm: 14px;
@@ -88,4 +87,10 @@
   --border-sm: 1px solid var(--black);
   --border-md: 4px solid var(--black);
   --border-lg: 12px solid var(--black);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

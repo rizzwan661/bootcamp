@@ -23,9 +23,9 @@ button {
 }
 
 .submitBtn {
-    background-color: blue;
+    background-color: var(--primary-color);
 }
 
 .removeBtn {
-    background-color: rgba(255, 0, 0, 0.72);
+    background-color: var(--error);
 }
